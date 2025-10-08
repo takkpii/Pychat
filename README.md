@@ -1,21 +1,66 @@
-MIT License
+A simple command-line chat application built in Python, using sockets and multi-threading.
+You can run multiple clients on the same network and chat in real time.
 
-Copyright (c) 2025 takkpii
+🚀 Features
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Multi-client chat server using TCP sockets
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Broadcast messages to all connected clients
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Threaded server for handling multiple users simultaneously
+
+Clean and modular project structure
+
+🧩 Project Structure
+chat_app/
+│
+├── server/
+│   └── server.py         # Chat server
+│
+├── client/
+│   └── client.py         # Chat client
+│
+├── utils/
+│   └── helpers.py        # Helper functions (future use)
+│
+├── config.py             # Configuration (IP, PORT, BUFFER)
+├── LICENSE               # MIT License
+└── README.md             # Project description
+
+⚙️ Requirements
+
+Python 3.8+
+
+No external libraries required (uses only Python’s built-in modules)
+
+💻 How to Run
+1️⃣ Start the server:
+python3 -m server.server
+
+2️⃣ Start a client (in another terminal):
+python3 -m client.client
+
+
+You can open multiple client terminals — any message you send from one will appear in all others.
+
+🧠 Commands (Client)
+
+Type any message → send to all clients
+
+Type exit → disconnect from server
+
+📄 License
+
+This project is licensed under the MIT License
+.
+Copyright © 2025 takkpii
+
+⭐ Future Improvements
+
+Add usernames and timestamps to messages
+
+Support private messaging
+
+Optional GUI (Tkinter or PyQt)
+
+Message encryption
